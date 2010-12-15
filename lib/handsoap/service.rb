@@ -198,7 +198,7 @@ module Handsoap
       self.class.request_content_type
     end
     def uri
-      self.class.uri
+      @uri || self.class.uri
     end
     def http_driver_instance
       Handsoap::Http.drivers[Handsoap.http_driver].new
